@@ -1,13 +1,13 @@
 package constants;
+
 /**
- *各出力メッセージを定義するEnumクラス
+ * 各出力メッセージを定義するEnumクラス
  *
  */
-
 public enum MessageConst {
 
     //認証
-    I_LOGINED("ログインしました。"),
+    I_LOGINED("ログインしました"),
     E_LOGINED("ログインに失敗しました。"),
     I_LOGOUT("ログアウトしました。"),
 
@@ -23,6 +23,7 @@ public enum MessageConst {
     E_EMP_CODE_EXIST("入力された社員番号の情報は既に存在しています。"),
     E_NOTITLE("タイトルを入力してください。"),
     E_NOCONTENT("内容を入力してください。");
+
 
     /**
      * 文字列
@@ -42,5 +43,4 @@ public enum MessageConst {
     public String getMessage() {
         return this.text;
     }
-
 }
