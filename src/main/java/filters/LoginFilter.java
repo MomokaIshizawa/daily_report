@@ -51,7 +51,7 @@ public class LoginFilter implements Filter {
         }else {
             HttpSession session = ((HttpServletRequest)request).getSession();
 
-            //クリエパラメーターからactionとcommandを取得
+            //クエリパラメーターからactionとcommandを取得
             String action = request.getParameter(ForwardConst.ACT.getValue());
             String command = request.getParameter(ForwardConst.CMD.getValue());
 

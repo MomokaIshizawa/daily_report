@@ -55,9 +55,9 @@ public class EmployeeService extends ServiceBase {
             String pass = EncryptUtil.getPasswordEncrypt(plainPass,pepper);
 
             //社員番号とハッシュ化済パスワードを条件に未削除の従業員を１件取得する
-            e = em.createNamedQuery(JpaConst.Q_EMP_GET_BY_CODE_AND_PASS,Employee.class)
+            e = em.createNamedQuery(JpaConst.Q_EMP_GET_BY_CODE_AND_PASS, Employee.class)
                     .setParameter(JpaConst.JPQL_PARM_CODE, code)
-                    .setParameter(JpaConst.JPQL_PARM_PASSWORD,pass)
+                    .setParameter(JpaConst.JPQL_PARM_PASSWORD, pass)
                     .getSingleResult();
         }catch (NoResultException ex) {
     }
