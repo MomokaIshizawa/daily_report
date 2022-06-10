@@ -17,8 +17,8 @@ body {
 }
 
 h1 {
-    font-size: 24px;
-    display: inline;
+   font-size:24px;
+   display:inline;
 }
 
 h2 {
@@ -88,7 +88,6 @@ button {
     color: #721c24;
     background-color: #f8d7da;
 }
-
 table#employee_list th {
     width: 30%;
     padding: 10px 2%;
@@ -105,7 +104,6 @@ tr.row1 {
 tr.row0 {
         background-color: #ffffff;
 }
-
 select {
     height: 30px;
 }
@@ -156,4 +154,7 @@ table#report_list .report_action {
 
 pre {
     font-family: "Hiragino Kaku Gothic Pro",Meiryo,"MS PGothic",Helvetica,Arial,sans-serif;
+}
+h3 {
+    font-size: larger;
 }

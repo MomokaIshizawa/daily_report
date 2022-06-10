@@ -11,15 +11,15 @@ import models.Employee;
  * 従業員データのDTOモデル⇔Viewモデルの変換を行うクラス
  *
  */
-
 public class EmployeeConverter {
 
     /**
-     * ViewモデルのインスタンスからＤＴＯモデルのインスタンスを生成する
+     * ViewモデルのインスタンスからDTOモデルのインスタンスを作成する
      * @param ev EmployeeViewのインスタンス
      * @return Employeeのインスタンス
      */
     public static Employee toModel(EmployeeView ev) {
+
         return new Employee(
                 ev.getId(),
                 ev.getCode(),
@@ -42,11 +42,11 @@ public class EmployeeConverter {
     /**
      * DTOモデルのインスタンスからViewモデルのインスタンスを作成する
      * @param e Employeeのインスタンス
-     * @return EmployeeView のインスタンス
+     * @return EmployeeViewのインスタンス
      */
     public static EmployeeView toView(Employee e) {
 
-        if (e == null) {
+        if(e == null) {
             return null;
         }
 
@@ -67,20 +67,20 @@ public class EmployeeConverter {
                         : e.getDeleteFlag() == JpaConst.EMP_DEL_TRUE
                                 ? AttributeConst.DEL_FLAG_TRUE.getIntegerValue()
                                 : AttributeConst.DEL_FLAG_FALSE.getIntegerValue());
-
     }
 
     /**
      * DTOモデルのリストからViewモデルのリストを作成する
-     * @param List   DTOモデルのリスト
+     * @param list DTOモデルのリスト
      * @return Viewモデルのリスト
      */
-
     public static List<EmployeeView> toViewList(List<Employee> list) {
         List<EmployeeView> evs = new ArrayList<>();
+
         for (Employee e : list) {
             evs.add(toView(e));
         }
+
         return evs;
     }
 
@@ -98,6 +98,7 @@ public class EmployeeConverter {
         e.setCreatedAt(ev.getCreatedAt());
         e.setUpdatedAt(ev.getUpdatedAt());
         e.setDeleteFlag(ev.getDeleteFlag());
+
     }
 
 }
