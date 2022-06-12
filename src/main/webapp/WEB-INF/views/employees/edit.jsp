@@ -4,9 +4,9 @@
 <%@ page import="constants.ForwardConst" %>
 
 <c:set var="action" value="${ForwardConst.ACT_EMP.getValue()}" />
-<c:set var="commIdx" value="${ForwardCosnt.CMD_INDEX.getValue()}" />
+<c:set var="commIdx" value="${ForwardConst.CMD_INDEX.getValue()}" />
 <c:set var="commUpd" value="${ForwardConst.CMD_UPDATE.getValue()}" />
-<c:set var="commDel" value="${ForwardCosnt.CMD_DESTROY.getValue()}" />
+<c:set var="commDel" value="${ForwardConst.CMD_DESTROY.getValue()}" />
 
 <c:import url="/WEB-INF/views/layout/app.jsp">
     <c:param name="content">

@@ -14,15 +14,14 @@ import constants.PropertyConst;
 import services.EmployeeService;
 
 /**
- * 従業員に関わる処理を行うクラス
+ * 従業員に関わる処理を行うActionクラス
  *
  */
-
 public class EmployeeAction extends ActionBase {
 
     private EmployeeService service;
 
-    /*
+    /**
      * メソッドを実行する
      */
     @Override
@@ -35,6 +34,7 @@ public class EmployeeAction extends ActionBase {
 
         service.close();
     }
+
 
     /**
      * 一覧画面を表示する
@@ -254,7 +254,7 @@ public class EmployeeAction extends ActionBase {
         //CSRF対策
         if (checkAdmin() && checkToken()) {
 
-            //idを条件に従業員データを論理削除する
+          //idを条件に従業員データを論理削除する
             service.destroy(toNumber(getRequestParam(AttributeConst.EMP_ID)));
 
             //セッションに削除完了のフラッシュメッセージを設定
@@ -264,7 +264,6 @@ public class EmployeeAction extends ActionBase {
             redirect(ForwardConst.ACT_EMP, ForwardConst.CMD_INDEX);
         }
     }
-
     /**
      * ログイン中の従業員か管理者かどうかチェックし、管理者でなければエラー画面を表示
      * true:管理者 false：管理者ではない
